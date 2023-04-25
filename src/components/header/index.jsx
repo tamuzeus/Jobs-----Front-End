@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import {
   Header,
   HeaderZoneOne,
@@ -14,7 +14,6 @@ import {
 
 export default function HeaderComponent({
   onSearch,
-  jobs,
   setJobs,
   originalJobs,
 }) {

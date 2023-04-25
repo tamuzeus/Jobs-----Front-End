@@ -18,15 +18,21 @@ export default function IndexPage() {
   }, []);
 
   const handleSearch = (inputByName, inputByCity) => {
-    const filteredJobs = originalJobs.filter((job) => {
-      const titleMatch = job.title
-        .toLowerCase()
-        .includes(inputByName.toLowerCase());
-      const cityMatch = job.cityName
-        .toLowerCase()
-        .includes(inputByCity.toLowerCase());
-      return titleMatch && cityMatch;
-    });
+    let filteredJobs;
+
+    if (inputByName || inputByCity) {
+      filteredJobs = originalJobs.filter((job) => {
+        const titleMatch = job.title
+          .toLowerCase()
+          .includes(inputByName.toLowerCase());
+        const cityMatch = job.cityname
+          .toLowerCase()
+          .includes(inputByCity.toLowerCase());
+        return titleMatch && cityMatch;
+      });
+    } else {
+      filteredJobs = originalJobs;
+    }
 
     setJobs(filteredJobs);
   };
