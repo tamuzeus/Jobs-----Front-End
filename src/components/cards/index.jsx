@@ -19,8 +19,8 @@ import {
 export default function Cards({ jobs }) {
   const filteredJobs = jobs.sort(
     (a, b) =>
-      new Date(b.updatedat).getTime() - new Date(a.updatedat).getTime() ||
-      new Date(b.createdat).getTime() - new Date(a.createdat).getTime()
+      new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
   );
 
   return (
@@ -37,13 +37,13 @@ export default function Cards({ jobs }) {
                 <DescriptionText>{job.description}</DescriptionText>
               </Description>
               <CompanyName>
-                <CompanyNameText>{job.companyname}</CompanyNameText>
+                <CompanyNameText>{job.companyName}</CompanyNameText>
               </CompanyName>
               <CityName>
-                <CityNameText>{job.cityname}</CityNameText>
+                <CityNameText>{job.cityName}</CityNameText>
               </CityName>
               <StateName>
-                <StateNameText>{job.statename}</StateNameText>
+                <StateNameText>{job.stateName}</StateNameText>
               </StateName>
             </CardBody>
           ))}

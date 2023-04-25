@@ -3,6 +3,7 @@ import { IndexStyle } from "./styled";
 import { useState, useEffect } from "react";
 import BodyArea from "../../components/body";
 import { getAllJobsList } from "../../api/jobsList";
+import Footer from "../../components/footer";
 
 export default function IndexPage() {
   const [jobs, setJobs] = useState([]);
@@ -25,7 +26,7 @@ export default function IndexPage() {
         const titleMatch = job.title
           .toLowerCase()
           .includes(inputByName.toLowerCase());
-        const cityMatch = job.cityname
+        const cityMatch = job.cityName
           .toLowerCase()
           .includes(inputByCity.toLowerCase());
         return titleMatch && cityMatch;
@@ -46,6 +47,8 @@ export default function IndexPage() {
         setJobs={setJobs}
       />
       <BodyArea jobs={jobs} />
+      <Footer/>
     </IndexStyle>
   );
 }
+
