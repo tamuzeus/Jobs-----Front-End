@@ -6,8 +6,13 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-around;
   background-color: #ffd700;
-  width: 100%;
+  width: 100vw;
   height: 102px;
+
+  
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 /* Zona 1 do header
@@ -27,6 +32,8 @@ export const PageTittle = styled.h1`
   font-size: 28px;
   user-select: none;
   cursor: pointer;
+
+  
 `;
 
 export const Point = styled.h2`
@@ -45,6 +52,7 @@ export const Point = styled.h2`
 
 export const HeaderZoneTwo = styled.div`
   width: 40%;
+  position: relative;
 `;
 
 export const IconArea = styled.div`
@@ -58,7 +66,7 @@ export const IconImg = styled.img`
 
 export const SearchArea = styled.div`
   background-color: white;
-  width: 113%;
+  width: 90%;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -67,6 +75,20 @@ export const SearchArea = styled.div`
   padding: 5px;
   padding-left: 10px;
   box-shadow: 0px 5px 10px rgba(39, 39, 39, 0.514);
+
+  @media screen and (max-width: 768px) {
+  position: absolute;
+  top: 70px;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 170%;
+}
+
+@media screen and (max-width: 480px) {
+    left: -20px;
+    width: 200%;
+  }
+
 `;
 
 export const SearchInput = styled.input`
@@ -92,18 +114,4 @@ export const Divider = styled.div`
     border-left: 1px solid #ebeff7;
     height: 50px;
   }
-`;
-
-export const SearchButton = styled.button`
-  background-color: #6f5192;
-  color: white;
-  font-weight: 400;
-  font-size: 17px;
-  width: 50%;
-  height: 80%;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  margin: 15px;
-  font-family: Noyh;
 `;

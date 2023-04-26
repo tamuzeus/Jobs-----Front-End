@@ -34,18 +34,48 @@ export const TitleZone = styled.h2`
     height: 5px;
     background-color: #ffd700;
   }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
+
 `;
 
 export const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 290px);
   grid-gap: 20px;
+
+  @media screen and (max-width: 1366px) {
+    grid-template-columns: repeat(4, 270px);
+  }
+
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: repeat(4, 250px);
+  }
+
+  @media screen and (max-width: 1152px) {
+    grid-template-columns: repeat(4, 200px);
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: repeat(4, 150px);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 280px);
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 300px;
+  }
 `;
 
 export const CardBody = styled.div`
   background-color: #ffffff;
   height: 230px;
-  width: 400px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -55,8 +85,8 @@ export const CardBody = styled.div`
   margin-bottom: 40px;
   cursor: pointer;
 
-  &:nth-child(3n) {
-    margin-bottom: 0;
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;
 

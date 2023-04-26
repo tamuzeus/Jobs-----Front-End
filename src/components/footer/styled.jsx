@@ -5,13 +5,14 @@ export const BodyFooter = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   z-index: 1;
   transition: opacity 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 `;
 
 export const ImgArea = styled.div`
@@ -22,4 +23,5 @@ export const ImgArea = styled.div`
 export const BodyImg = styled.img`
   height: 100%;
   width: 100%;
+  cursor: pointer;
 `;

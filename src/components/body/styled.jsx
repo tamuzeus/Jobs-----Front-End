@@ -20,21 +20,6 @@ export const CardsContainerWrapper = styled.div`
   margin-right: 20px;
 `;
 
-
-export const CardsContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  width: 100%;
-  transition: transform 0.5s ease;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
 export const NavigationButton = styled.button`
   font-size: 25px;
   border: none;
@@ -66,5 +51,12 @@ export const NavigationButton = styled.button`
 
   &:active {
     transform: translateY(2px);
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 900px;
+    display: flex;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 `;

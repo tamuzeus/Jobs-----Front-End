@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import Larken from '../fonts/Larken.otf';
-import LarkenBlack from '../fonts/LarkenBlack.otf';
-import Noyh from '../fonts/Noyh.otf';
-import olivetta from '../fonts/olivetta.otf'
+import Larken from "../fonts/Larken.otf";
+import LarkenBlack from "../fonts/LarkenBlack.otf";
+import Noyh from "../fonts/Noyh.otf";
+import olivetta from "../fonts/olivetta.otf";
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -93,6 +93,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   -webkit-tap-highlight-color: transparent;
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 
 `;
 
