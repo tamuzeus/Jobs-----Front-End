@@ -84,6 +84,7 @@ export const SearchArea = styled.div`
   padding-left: 10px;
   box-shadow: 0px 5px 10px rgba(39, 39, 39, 0.514);
   z-index: 3;
+  user-select: none;
 `;
 
 export const SearchInput = styled.input`

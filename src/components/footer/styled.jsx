@@ -13,7 +13,7 @@ export const BodyFooter = styled.div`
   align-items: center;
   user-select: none;
 
-  @media screen and (max-width: 1366px) {
+  @media screen and (max-width: 1680px) {
     opacity: ${(props) => (props.isVisible ? "1" : "0")};
     transition: opacity 0.5s ease;
   }

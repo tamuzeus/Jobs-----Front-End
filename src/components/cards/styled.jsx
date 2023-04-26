@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const CardsZone = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const NoJobsMessage = styled.h2`
   font-size: 36px;
   font-weight: bold;
@@ -14,49 +9,23 @@ export const NoJobsMessage = styled.h2`
   margin-top: 50px;
   margin: 20px;
 `;
-
-export const TitleZone = styled.h2`
-  position: relative;
+export const CardsZone = styled.div`
   display: flex;
-  justify-content: start;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #373f41;
-  height: 70px;
-  user-select: none;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 55px;
-    left: 0;
-    width: 40px;
-    height: 5px;
-    background-color: #ffd700;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-top: 50px;
-  }
-
-  @media screen and (max-width: 768px) {
-    &::before {
-      background-color: #f9f9f9;
-    }
-  }
+  flex-direction: column;
 `;
 
 export const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 290px);
-  grid-gap: 20px;
-
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
+  gap: 20px;
+  padding: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  max-width: 1000px;
+  height: auto;
+
   @media screen and (max-width: 1366px) {
     grid-template-columns: repeat(4, 270px);
   }
@@ -84,7 +53,7 @@ export const CardsContainer = styled.div`
 
 export const CardBody = styled.div`
   background-color: #ffffff;
-  height: 230px;
+  height: 100%;
   width: 100%;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -92,31 +61,25 @@ export const CardBody = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  margin-bottom: 40px;
   cursor: pointer;
   font-family: Noyh;
   transition: transform 0.2s ease-in-out;
+  flex-grow: 1;
 
   &:hover {
     transform: translateY(-10px);
     & > div > svg {
-      color: #6F5192;
+      color: #6f5192;
     }
-    & > div > .faMapMarkerAlt {
-      color: yellow; 
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
   }
 `;
+
 
 export const Title = styled.div`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;
+  width: 200px;
 `;
 
 export const TitleText = styled.div`
@@ -125,7 +88,7 @@ export const TitleText = styled.div`
   white-space: nowrap;
 
   ${CardBody}:hover & {
-    color: #6F5192;
+    color: #6f5192;
   }
 `;
 
@@ -145,7 +108,7 @@ export const DescriptionText = styled.div`
 export const CompanyName = styled.div`
   font-size: 15px;
   color: #999999;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
 `;
@@ -159,6 +122,7 @@ export const CityName = styled.div`
   color: #999999;
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 `;
 
 export const CityNameText = styled.div`

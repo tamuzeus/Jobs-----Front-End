@@ -4,7 +4,6 @@ import {
   CardsContainer,
   Title,
   TitleText,
-  TitleZone,
   CityName,
   CityNameText,
   StateName,
@@ -20,7 +19,6 @@ import { FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
 export default function Cards({ jobs }) {
   return (
     <CardsZone>
-      <TitleZone>Vagas em Destaque</TitleZone>
       {jobs.length > 0 ? (
         <CardsContainer>
           {jobs.map((job) => (
