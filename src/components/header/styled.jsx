@@ -25,6 +25,8 @@ export const PageTittle = styled.h1`
   color: black;
   font-family: LarkenBlack;
   font-size: 28px;
+  user-select: none;
+  cursor: pointer;
 `;
 
 export const Point = styled.h2`
@@ -34,6 +36,8 @@ export const Point = styled.h2`
   position: absolute;
   top: 21px;
   right: 51px;
+  user-select: none;
+  cursor: pointer;
 `;
 
 /* Zona 2 do header

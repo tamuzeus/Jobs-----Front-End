@@ -47,8 +47,7 @@ export default function IndexPage() {
         setJobs={setJobs}
       />
       <BodyArea jobs={jobs} />
-      <Footer/>
+      <Footer />
     </IndexStyle>
   );
 }
-

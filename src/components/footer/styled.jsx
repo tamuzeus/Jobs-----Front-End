@@ -8,7 +8,6 @@ export const BodyFooter = styled.div`
   width: 100%;
   height: 100px;
   z-index: 1;
-  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
   transition: opacity 0.5s ease;
   display: flex;
   justify-content: center;

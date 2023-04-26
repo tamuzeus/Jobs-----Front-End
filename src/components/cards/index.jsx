@@ -13,22 +13,16 @@ import {
   DescriptionText,
   CompanyName,
   CompanyNameText,
-  NoJobsMessage
+  NoJobsMessage,
 } from "./styled";
 
 export default function Cards({ jobs }) {
-  const filteredJobs = jobs.sort(
-    (a, b) =>
-      new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
-      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  );
-
   return (
     <CardsZone>
       <TitleZone>Vagas em Destaque</TitleZone>
-      {filteredJobs.length > 0 ? (
+      {jobs.length > 0 ? (
         <CardsContainer>
-          {filteredJobs.map((job) => (
+          {jobs.map((job) => (
             <CardBody key={job.id}>
               <Title>
                 <TitleText>{job.title}</TitleText>
@@ -49,7 +43,9 @@ export default function Cards({ jobs }) {
           ))}
         </CardsContainer>
       ) : (
-        <NoJobsMessage>Não há vagas para esta busca no momento :( !</NoJobsMessage>
+        <NoJobsMessage>
+          Não há vagas para esta busca no momento :( !
+        </NoJobsMessage>
       )}
     </CardsZone>
   );

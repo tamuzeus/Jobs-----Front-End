@@ -16,12 +16,14 @@ export const NoJobsMessage = styled.h2`
 
 export const TitleZone = styled.h2`
   position: relative;
-  display: inline-block;
-  padding-bottom: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   font-size: 24px;
   font-weight: bold;
-  height: 30px;
   color: #373f41;
+  height: 70px;
+  user-select: none;
 
   &::before {
     content: "";
@@ -51,6 +53,7 @@ export const CardBody = styled.div`
   justify-content: space-between;
   padding: 20px;
   margin-bottom: 40px;
+  cursor: pointer;
 
   &:nth-child(3n) {
     margin-bottom: 0;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Header,
   HeaderZoneOne,
@@ -12,37 +12,21 @@ import {
   IconImg,
 } from "./styled";
 
-export default function HeaderComponent({
-  onSearch,
-  setJobs,
-  originalJobs,
-}) {
+export default function HeaderComponent({ onSearch, allJobs }) {
   const [nameInput, setNameInput] = useState("");
   const [cityInput, setCityInput] = useState("");
 
   const handleNameInputChange = (event) => {
     const value = event.target.value;
     setNameInput(value);
-    if (value === "" && cityInput === "") {
-      setJobs(originalJobs);
-    } else {
-      onSearch(value, cityInput);
-    }
+    onSearch(value, cityInput, allJobs);
   };
 
   const handleCityInputChange = (event) => {
     const value = event.target.value;
     setCityInput(value);
-    if (value === "" && nameInput === "") {
-      setJobs(originalJobs);
-    } else {
-      onSearch(nameInput, value);
-    }
+    onSearch(nameInput, value, allJobs);
   };
-
-  useEffect(() => {
-    setJobs(originalJobs);
-  }, [originalJobs, setJobs]);
 
   return (
     <>
