@@ -22,7 +22,9 @@ Front End que tem como função demonstrar uma lista completa de vagas disponív
 npm i
 ```
 
-3. Execute o React
+3. Configure o `.env` de acordo com o `.env.example`.
+
+4. Execute o React
 
 ```bash
 npm start
