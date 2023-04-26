@@ -1,6 +1,7 @@
 import axios from "axios";
+import config from "../config.json";
 
-const BASE_URL = "http://localhost:4000/";
+const BASE_URL = config.BASE_URL || "http://localhost:4000/";
 
 export async function getAllJobsList() {
   try {

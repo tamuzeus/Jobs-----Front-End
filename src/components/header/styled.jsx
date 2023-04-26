@@ -9,7 +9,6 @@ export const Header = styled.div`
   width: 100vw;
   height: 102px;
 
-  
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -32,8 +31,6 @@ export const PageTittle = styled.h1`
   font-size: 28px;
   user-select: none;
   cursor: pointer;
-
-  
 `;
 
 export const Point = styled.h2`
@@ -52,7 +49,18 @@ export const Point = styled.h2`
 
 export const HeaderZoneTwo = styled.div`
   width: 40%;
-  position: relative;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    align-self: center;
+    justify-items: center;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    width: 90%;
+  }
+
+  z-index: 3;
 `;
 
 export const IconArea = styled.div`
@@ -75,20 +83,7 @@ export const SearchArea = styled.div`
   padding: 5px;
   padding-left: 10px;
   box-shadow: 0px 5px 10px rgba(39, 39, 39, 0.514);
-
-  @media screen and (max-width: 768px) {
-  position: absolute;
-  top: 70px;
-  left: 20%;
-  transform: translateX(-50%);
-  width: 170%;
-}
-
-@media screen and (max-width: 480px) {
-    left: -20px;
-    width: 200%;
-  }
-
+  z-index: 3;
 `;
 
 export const SearchInput = styled.input`

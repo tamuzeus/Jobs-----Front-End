@@ -11,7 +11,7 @@ export default function IndexPage() {
 
   useEffect(() => {
     async function fetchData() {
-      const jobsData = await getAllJobsList();
+      const jobsData = await getAllJobsList(); //Api e armazenar a lista original e uma editavel
       setJobs(jobsData);
       setOriginalJobs(jobsData);
     }
@@ -22,6 +22,7 @@ export default function IndexPage() {
     let filteredJobs;
 
     if (inputByName || inputByCity) {
+      //Fazer filtragem do jobs filtrados(nome e cidade)
       filteredJobs = originalJobs.filter((job) => {
         const titleMatch = job.title
           .toLowerCase()
@@ -35,7 +36,7 @@ export default function IndexPage() {
       filteredJobs = originalJobs;
     }
 
-    setJobs(filteredJobs);
+    setJobs(filteredJobs); //Armazena em jobs(editavel) os filtrados
   };
 
   return (

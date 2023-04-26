@@ -12,20 +12,22 @@ import {
   IconImg,
 } from "./styled";
 
-export default function HeaderComponent({ onSearch, allJobs }) {
+export default function HeaderComponent({ onSearch }) {
   const [nameInput, setNameInput] = useState("");
   const [cityInput, setCityInput] = useState("");
+
+  //Receber os inputs:
 
   const handleNameInputChange = (event) => {
     const value = event.target.value;
     setNameInput(value);
-    onSearch(value, cityInput, allJobs);
+    onSearch(value, cityInput);
   };
 
   const handleCityInputChange = (event) => {
     const value = event.target.value;
     setCityInput(value);
-    onSearch(nameInput, value, allJobs);
+    onSearch(nameInput, value);
   };
 
   return (
@@ -33,7 +35,7 @@ export default function HeaderComponent({ onSearch, allJobs }) {
       <Header>
         <HeaderZoneOne>
           <PageTittle>{"o Amarelinho"}</PageTittle>
-          <Point>{"."}</Point>
+          <Point>{"."}</Point> 
         </HeaderZoneOne>
 
         <HeaderZoneTwo>
