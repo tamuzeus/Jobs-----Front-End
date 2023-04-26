@@ -22,7 +22,7 @@ Front End que tem como função demonstrar uma lista completa de vagas disponív
 npm i
 ```
 
-3. Configure o `.config.json`, o exemplo utilizado foi o próprio `"http://localhost:4000/"`.
+3. Configure o `.config.json`, o exemplo utilizado foi o próprio `"http://localhost:4000/"` que também é o da API (altere de acordo com seu env da API).
 
 4. Execute o React
 
