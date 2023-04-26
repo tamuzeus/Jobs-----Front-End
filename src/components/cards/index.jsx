@@ -15,6 +15,7 @@ import {
   CompanyNameText,
   NoJobsMessage,
 } from "./styled";
+import { FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
 
 export default function Cards({ jobs }) {
   return (
@@ -31,12 +32,15 @@ export default function Cards({ jobs }) {
                 <DescriptionText>{job.description}</DescriptionText>
               </Description>
               <CompanyName>
+                <FaBuilding />
                 <CompanyNameText>{job.companyName}</CompanyNameText>
               </CompanyName>
               <CityName>
+                <FaMapMarkerAlt />
                 <CityNameText>{job.cityName}</CityNameText>
               </CityName>
               <StateName>
+                <FaMapMarkerAlt />
                 <StateNameText>{job.stateName}</StateNameText>
               </StateName>
             </CardBody>

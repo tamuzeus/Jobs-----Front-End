@@ -95,6 +95,18 @@ export const CardBody = styled.div`
   margin-bottom: 40px;
   cursor: pointer;
   font-family: Noyh;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+    & > div > svg {
+      color: #6F5192;
+    }
+    & > div > .faMapMarkerAlt {
+      color: yellow; 
+    }
+  }
+
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -111,6 +123,10 @@ export const TitleText = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  ${CardBody}:hover & {
+    color: #6F5192;
+  }
 `;
 
 export const Description = styled.div`
@@ -130,24 +146,32 @@ export const CompanyName = styled.div`
   font-size: 15px;
   color: #999999;
   margin-bottom: 2px;
+  display: flex;
+  align-items: center;
 `;
 
 export const CompanyNameText = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-left: 5px;
 `;
 
 export const CityName = styled.div`
   font-size: 13px;
   color: #999999;
+  display: flex;
+  align-items: center;
 `;
 
-export const CityNameText = styled.div``;
+export const CityNameText = styled.div`
+  margin-left: 5px;
+`;
 
 export const StateName = styled.div`
   font-size: 12px;
   color: #999999;
+  display: flex;
+  align-items: center;
 `;
 
-export const StateNameText = styled.div``;
+export const StateNameText = styled.div`
+  margin-left: 5px;
+`;
